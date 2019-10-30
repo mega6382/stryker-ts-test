@@ -1,0 +1,35 @@
+{
+    "name": "stryker-ts-test",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "test": "tsc && mocha || true",
+        "stryker": "stryker run",
+        "tsc": "tsc"
+    },
+    "mocha": {
+        "delay": true,
+        "noOpts": true,
+        "timeout": 25000,
+        "colors": true,
+        "require": [
+            "source-map-support/register"
+        ],
+        "recursive": true,
+        "spec": "build/test/**/*.test.js"
+    },
+    "devDependencies": {
+        "@stryker-mutator/core": "^2.1.0",
+        "@stryker-mutator/html-reporter": "^2.1.0",
+        "@stryker-mutator/mocha-framework": "^2.1.0",
+        "@stryker-mutator/mocha-runner": "^2.1.0",
+        "@stryker-mutator/typescript": "^2.1.0",
+        "@types/chai": "^4.2.3",
+        "@types/mocha": "^5.2.7",
+        "@types/node": "^12.7.7",
+        "chai": "^4.2.0",
+        "mocha": "^6.2.0",
+        "source-map-support": "^0.5.13",
+        "typescript": "^3.6.3"
+    }
+}
